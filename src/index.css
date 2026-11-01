@@ -1,0 +1,155 @@
+:root {
+  --ink: #241a52;
+  --ink-soft: #514873;
+  --muted: #877fa6;
+  --bg: #f4f1ff;
+  --card: #ffffff;
+  --line: #e6e0fb;
+  --brand: #7c4dff;
+  --brand-dark: #5b2fe0;
+  --brand-soft: #efe9ff;
+  --coral: #ff7a59;
+  --teal: #37c8ab;
+  --sun: #ffc94d;
+  --danger: #d93a3f;
+  --shadow: 0 26px 60px -34px rgba(48, 30, 116, 0.45);
+  --radius: 24px;
+  --sans: ui-rounded, 'SF Pro Rounded', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--ink);
+  background: var(--bg);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 1.22rem;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  cursor: progress;
+  opacity: 0.65;
+  transform: none;
+}
+
+.button:focus-visible,
+.chip:focus-visible,
+.controls__button:focus-visible,
+.card__actions button:focus-visible,
+.dropzone:focus-visible,
+.toast button:focus-visible {
+  outline: 3px solid rgba(124, 77, 255, 0.35);
+  outline-offset: 2px;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+  color: #fff;
+  box-shadow: 0 14px 30px -16px rgba(91, 47, 224, 0.9);
+}
+
+.button--ghost {
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.button--ghost:hover {
+  border-color: var(--brand);
+  color: var(--brand-dark);
+}
+
+.button--light {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+}
+
+.button--sun {
+  background: var(--sun);
+  color: #4a3200;
+  box-shadow: 0 16px 34px -18px rgba(255, 201, 77, 0.95);
+}
